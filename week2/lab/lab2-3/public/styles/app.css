@@ -1,0 +1,72 @@
+body { 
+  font-family: sans-serif; 
+  background: #0088c5;
+ 
+}
+
+
+.list-item {
+  background-color: white; 
+  margin: 5px; 
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 #ccc;
+  font-size: 12px;
+}
+
+.list-box {
+  background-color: #ddd;
+  padding: 15px 10px 15px 10px;
+  width: 300px;
+  border-radius: 3px;
+  font-weight: bold;
+  
+}
+
+
+.list-item {
+  background-color:white;
+  height: 40px;
+  position: relative;
+
+}
+
+.done button {
+  background-color: #39bb5c;
+}
+
+.undone p {
+  text-decoration: line-through;
+}
+
+.undone button {
+background-color: #dd4b39;
+  
+}
+
+.list-item p {
+  margin-left: 10px
+}
+
+
+
+.list-item button {
+  right: 10px;
+  float: right;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%)
+
+   
+}
+
+
+input.add-item {
+  background-color: #ddd;
+  color: #8c8c8c;
+  border: none;
+  box-sizing: border-box;
+  margin-top: 10px;
+  padding: 10px;
+  padding-left: 10px;
+}

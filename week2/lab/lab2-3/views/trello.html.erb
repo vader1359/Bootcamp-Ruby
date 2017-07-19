@@ -1,0 +1,40 @@
+
+  <h1>Test</h1>
+
+
+<div class="list-box">
+  <div style = "margin-bottom: 15px">Today</div>
+  
+  <div class="list-item undone">
+    <p>Learning Strings<p>
+    <button>Done</button>
+  </div>
+  
+  <div class="list-item done">
+    <p>Learn Numbers</p>
+    <button>Undone</button>
+  </div>
+  
+  <div class="list-item undone">
+    <p>Learn Hash</p>
+    <button>Done</button>
+  </div>
+
+  <div class="list-item undone">
+    <p>Learn how to sleep</p>
+    <button>Done</button>
+  </div>
+
+  <div class="list-item undone">
+    <p>Learn ERB</p>
+    <button>Done</button>
+  </div>
+  
+<% items.each do |item| %>
+  <%= erb :"_item.html", locals: {item: item} %>
+<% end %>
+  
+  <input class="add-item" type="text" placeholder="Add an item..."/>
+
+</div>
+<h1 class="another-header">End of page</h1>
