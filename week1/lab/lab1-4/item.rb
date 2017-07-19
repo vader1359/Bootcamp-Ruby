@@ -57,4 +57,3 @@ p item.name
 p item.done
 
 # What is hte exclamation mark after mark_done! also, what is the ? after Done
-# Is it self.new_from_line is a way to create second initialization in Ruby?
