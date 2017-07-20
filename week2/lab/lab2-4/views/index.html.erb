@@ -1,2 +1,24 @@
-<h1>Lab 2.4</h1>
-<p>I am in index.htmnl.erb</p>
+<h1>Lab 2-4</h1>
+<p>I am in index.html.erb</p>
+
+<style>
+  .debug {padding: 5px; margin-bottom: 5px; background-color: #efefef;}
+  .done { text-decoration: line-through }
+</style>
+
+<div class="debug">
+  <strong>Params:</strong><%= params %>
+</div>
+
+<ul>
+  <% items.each do |item| %>
+    <li class = "<%= item[:status] %>">
+      <%= item[:name] %>
+    </li>
+    <% end %>
+</ul>
+
+<form method="post" action="/submit">
+  <input type="text" name="item_name">
+  <input type="submit">
+</form>
