@@ -12,13 +12,22 @@
 
 <ul>
   <% items.each do |item| %>
-    <li class = "<%= item[:status] %>">
-      <%= item[:name] %>
-    </li>
-    <% end %>
+  <li class = "<%= item[:status] %>">
+    <%= item[:name] %>
+    
+  </li>
+  <% end %>
 </ul>
 
 <form method="post" action="/submit">
-  <input type="text" name="item_name">
-  <input type="submit">
+
+  <input type="text" name="item_name"
+  
+  <label>
+  <input type="checkbox" name="done" value="1">
+  
+  Done?
+</label>
+<input type="submit">
 </form>
+ "text" to the page "/submit"  --><!--Here we create a from to "post" the "item_name" type
