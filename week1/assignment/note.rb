@@ -19,3 +19,5 @@ Todo
   .show_done -> array of Item | Void
   .show_undone -> Array of Item | Void
   .display -> Array of String | Void
+  .delete -> Array of Item | Set
+  .add -> Array of Item | Set

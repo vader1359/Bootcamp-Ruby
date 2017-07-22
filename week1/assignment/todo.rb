@@ -23,6 +23,13 @@ class Todo
   
   #=====================
   
+  
+  def save_data(file_name = "todo.md")
+    File.open("todo.md", "w+") do |file|
+      @list.items.map {|item| file.write("#{self.show_all}")}
+    end
+  end
+  
   def add(name)
     @list.add(Item.new("#{name}"))
   end
@@ -73,21 +80,36 @@ class Todo
   #=====================
   
   def prompt
-    puts "What do you want to do?"
+    loop do puts "What do you want to do?"
       input = gets.chomp
       case input
-    when "all" then self.show_all
-    when "done" then self.show_done
-    when "undone" then self.show_undone
+    when "all" then # puts self.show_all
+      break
+    when "done" then # puts self.show_done
+      break
+    when "undone" then # puts self.show_undone
+      break
     else
       if input[0] == "+" then self.add("#{input[2..-1]}")
+      puts self.show_all
+      break
     elsif input[0..5] == "remove" then self.delete((input[7]).to_i)
-    elsif input[0..3] == "exit" then exit
+      # puts self.show_all
+      break
     end
-    
+    break if input == "exit"
   end
   
-  
+end
+
+#=====================
+
+# Test
+# test_todo.prompt
+
+#=====================
+
+
 end
 
 
@@ -105,7 +127,8 @@ test_todo = Todo.new("todo.md")
 
 test_todo.add("Go home")
 test_todo.add("Go to work")
-p test_todo
+# p test_todo
 spr
 test_todo.prompt
-p test_todo
+# p test_todo
+# test_todo.save_data
