@@ -2,4 +2,4 @@
 - [ ] Help someone learn Ruby
 - [x] Learn Array
 - [x] Learn Methods
-- [x] Review Class
+- [ ] Review Class

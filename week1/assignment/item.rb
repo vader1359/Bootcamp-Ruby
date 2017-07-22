@@ -50,9 +50,9 @@ class Item
   
   def display
     if @status == true
-      "[x] #{@name}"
+      "- [x] #{@name}"
     else
-      "[ ] #{@name}"
+      "- [ ] #{@name}"
     end
   end
   

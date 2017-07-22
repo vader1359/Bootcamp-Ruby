@@ -7,9 +7,10 @@ end
 #=====================
 
 class List
+  attr_accessor :name, :items
   
   def initialize(name, items = [])
-    @name = items
+    @name = name
     @items = items
   end
   
@@ -35,23 +36,52 @@ class List
   
   #=====================
   
+  
+  def delete(item_index)
+    @items.delete_at(item_index)
+  end
+
+  #=====================
+  
+  # Test
+  # test_list.delete(2)
+  
+  #=====================
+  
+  def done
+    @items.keep_if {|item| item.status == true}
+  end
+  
+  def undone
+    @items.keep_if {|item| item.status == false}
+  end
+  
+  #=====================
+  
+  # Test
+  # puts test_list.done.display
+  # puts test_list.undone.display
+  
+  #=====================
+  
 end
 #==========================================
 
 # Instance for test
-# test_list = List.new("test_list", [
-# Item.new("test_item1", true),
-# Item.new("test_item2")
-# ])
+test_list = List.new("test_list", [
+Item.new("test_item1", true),
+Item.new("test_item2")
+])
 # puts "Use the test_item to test methods above"
-# # puts test_list.display
-# spr
+# puts test_list.display
 
 #==========================================
 
 # test_list.add(Item.new("Go to CS", true))
 # puts test_list.display
-
+# spr
+# test_list.delete(1)
+# puts test_list.display
 
 
 

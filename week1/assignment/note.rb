@@ -11,7 +11,11 @@ Item
 List
   .display -> array | Void
   .add -> array | Set
+  .delete -> array | Set
 
 Todo
   .load_data -> array of Item | Void
-  .show_all -> array of Iem | Void
+  .show_all -> array of Item | Void
+  .show_done -> array of Item | Void
+  .show_undone -> Array of Item | Void
+  .display -> Array of String | Void
