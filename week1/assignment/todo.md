@@ -1,0 +1,5 @@
+- [x] Love Ruby
+- [ ] Help someone learn Ruby
+- [x] Learn Array
+- [x] Learn Methods
+- [x] Review Class
