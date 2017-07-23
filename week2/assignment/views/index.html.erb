@@ -1,13 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>My Trello Clone</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style/style.css" rel="stylesheet">
-  </head>
-  <body>
-    <h1>Hello World</h1>
+<div class="todo">
   
-  </body>
-</html>
+  <form class="change_status" action="/change_status" method="post">
+    
+    
+  <div class="list">
+    <h1 class="board_title">Undone</h1>
+    
+    <% todo.items.map do |item| %>
+    <div class="item">
+      
+      <div class="content"><%= item.name %></div>
+      <div class="check_button">
+        
+         <input type="checkbox" name="status" value="1" <%= "checked" if item.status == true %>> 
+        
+        
+        <% if item.status == true %> 
+          <%= "Done" %>
+        <% else %>
+          <%= "Undone" %>
+        <% end %>
+      </div>
+      
+    </div>
+    <% end %>
+
+
+    <input type="text" name="name">
+    <input type="checkbox" name="status">
+    <!-- <input type="text" name="update" value="
+    <% items.
+    "> -->
+    <input type="submit">
+
+    </form>
+    
+    
+  </div>
+  
+</div>
